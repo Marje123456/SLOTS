@@ -13,6 +13,7 @@ class ResponsibleController extends Controller
     public function index()
     {
         //
+        return view('Responsible.index');
     }
 
     /**
@@ -21,6 +22,7 @@ class ResponsibleController extends Controller
     public function create()
     {
         //
+        return view('Responsible.create');
     }
 
     /**
@@ -37,6 +39,7 @@ class ResponsibleController extends Controller
     public function show(Responsible $responsible)
     {
         //
+        return view('Responsible.show');
     }
 
     /**
@@ -45,6 +48,7 @@ class ResponsibleController extends Controller
     public function edit(Responsible $responsible)
     {
         //
+        return view('Responsible.edit');
     }
 
     /**
