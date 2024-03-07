@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Slots Management',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -312,77 +312,62 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'CONFIGURACIÓN',
+            'icon'    => 'fas fa-fw fa-solid fa-wrench',
+            'icon_color' => 'red',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Mi Perfil',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-regular fa-address-card',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Cambiar Contraseña',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
+            'text'    => 'GESTIÓN USUARIOS',
+            'icon'    => 'fas fa-fw fa-solid fa-users',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'submenu' => [
+                [
+                    'text' => 'Fiscal',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-user-nurse',
+                ],
+                [
+                    'text' => 'Usuario',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-user-shield',
+                ],
+            ],
         ],
         [
-            'text'       => 'information',
+            'text'    => 'GESTIÓN CLIENTES',
+            'icon'    => 'fas fa-fw fa-solid fa-house-user',
             'icon_color' => 'cyan',
-            'url'        => '#',
+            'submenu' => [
+                [
+                    'text' => 'Representante',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-user-tie',
+                ],
+                [
+                    'text' => 'Local',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-building',
+                ],
+                [
+                    'text' => 'Máquina',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-desktop',
+                ],
+            ],
         ],
+        
     ],
 
     /*
