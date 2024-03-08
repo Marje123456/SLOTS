@@ -352,7 +352,8 @@ return [
             'submenu' => [
                 [
                     'text' => 'Representante',
-                    'url'  => 'admin/settings',
+                    'route'  => 'responsible.create',
+                    /* 'url'  => '../resources/views/Responsible/create.blade.php', */
                     'icon' => 'fas fa-fw fa-solid fa-user-tie',
                 ],
                 [
