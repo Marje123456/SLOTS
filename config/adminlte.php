@@ -368,6 +368,28 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'REPORTES',
+            'icon'    => 'fas fa-fw fa-solid fa-house-user',
+            'icon_color' => 'cyan',
+            'submenu' => [
+                [
+                    'text' => 'Representantes',
+                    'route'  => 'responsible.index',
+                    'icon' => 'fas fa-fw fa-solid fa-user-tie',
+                ],
+                [
+                    'text' => 'Local',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-building',
+                ],
+                [
+                    'text' => 'Máquina',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-solid fa-desktop',
+                ],
+            ],
+        ],
         
     ],
 

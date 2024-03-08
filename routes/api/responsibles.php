@@ -5,4 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 /* Route::get('/responsibles', [ResponsibleController::class, 'index']); */
 
-Route::resource('responsible', ResponsibleController::class);
+Route::resource('responsible', ResponsibleController::class)->names('responsible');

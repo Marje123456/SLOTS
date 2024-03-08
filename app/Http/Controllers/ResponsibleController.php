@@ -13,7 +13,8 @@ class ResponsibleController extends Controller
     public function index()
     {
         //
-        return view('responsible.index');
+        $responsibles = Responsible::all();
+        return view('responsible.index',compact('responsibles'));
     }
 
     /**
@@ -22,6 +23,7 @@ class ResponsibleController extends Controller
     public function create()
     {
         //
+
         return view('responsible.create');
     }
 
@@ -31,6 +33,16 @@ class ResponsibleController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate
+        ([
+            'idc' => 'required|min:6|max:15',
+            'names' => 'required|min:3|max:50',
+            'last_names' => 'required|min:3|max:50',
+            'phone' => 'min:8|max:32'
+        ]);
+        /* return $request->all(); */
+        $responsible = Responsible::create($request->all());
+        return redirect()->route('responsible.index');
     }
 
     /**
@@ -48,7 +60,7 @@ class ResponsibleController extends Controller
     public function edit(Responsible $responsible)
     {
         //
-        return view('responsible.edit');
+        return view('responsible.edit', compact('responsible'));
     }
 
     /**
@@ -57,6 +69,16 @@ class ResponsibleController extends Controller
     public function update(Request $request, Responsible $responsible)
     {
         //
+        $request->validate
+        ([
+            'idc' => 'required|min:6|max:15',
+            'names' => 'required|min:3|max:50',
+            'last_names' => 'required|min:3|max:50',
+            'phone' => 'min:8|max:32'
+        ]);
+
+        $responsible->update($request->all());
+        return redirect()->route('responsible.edit', $responsible);
     }
 
     /**
@@ -65,5 +87,7 @@ class ResponsibleController extends Controller
     public function destroy(Responsible $responsible)
     {
         //
+        $responsible->delete();
+        return redirect()->route('responsible.index');
     }
 }

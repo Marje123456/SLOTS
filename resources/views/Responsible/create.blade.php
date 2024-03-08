@@ -28,7 +28,7 @@
                                     <div class="form-group">
                                         <label for="idc">Cédula de Identidad</label>
                                         <input type="text" class="form-control" id="idc" name="idc" placeholder="Ingresa CI">
-                                    </div>
+                                   </div>
                                     <div class="form-group">
                                         <label for="names">Nombre</label>
                                         <input type="text" class="form-control" id="names" name="names" placeholder="Ingresa Nombres">
@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="phone">Teléfono</label>
                                         <input type="text" class="form-control" id="phone" name="phone" placeholder="Ingresa Teléfono">
-                                    </div>
+                                        </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Registrar</button>
