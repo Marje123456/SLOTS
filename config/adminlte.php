@@ -358,7 +358,7 @@ return [
                 ],
                 [
                     'text' => 'Local',
-                    'url'  => 'admin/settings',
+                    'route'  => 'premise.create',
                     'icon' => 'fas fa-fw fa-solid fa-building',
                 ],
                 [
@@ -380,7 +380,7 @@ return [
                 ],
                 [
                     'text' => 'Local',
-                    'url'  => 'admin/settings',
+                    'route'  => 'premise.index',
                     'icon' => 'fas fa-fw fa-solid fa-building',
                 ],
                 [
