@@ -363,7 +363,7 @@ return [
                 ],
                 [
                     'text' => 'Máquina',
-                    'url'  => 'admin/settings',
+                    'route'  => 'machine.create',
                     'icon' => 'fas fa-fw fa-solid fa-desktop',
                 ],
             ],
@@ -385,7 +385,7 @@ return [
                 ],
                 [
                     'text' => 'Máquina',
-                    'url'  => 'admin/settings',
+                    'route'  => 'machine.index',
                     'icon' => 'fas fa-fw fa-solid fa-desktop',
                 ],
             ],
