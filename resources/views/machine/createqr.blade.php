@@ -5,7 +5,6 @@
 @section('content_header')
     <h1>CÓDIGO QR PARA LA MÁQUINA {{$machine->code}}</h1>
 
-    <h1>POR FAVOR GUARDE EL CÓGIDO QR GENERADO</h1>
 @stop
 
 @section('content')
@@ -19,9 +18,16 @@
         'Estatus: '.$machine->active_status
     ) !!}
 </div>
-<div>
-    <a href="{{route('machine.activatemachine',$machine)}}" class="btn btn-warning btn-sm">Activar Máquina</a>
-</div>
+@if ($machine->active_status==0)
+    <div>
+        <a href="{{route('machine.activatemachine',$machine)}}" class="btn btn-warning btn-sm">Activar Máquina</a>
+    </div>
+@else
+    <div>
+
+    </div>
+@endif
+
     
 @stop
 

@@ -20,8 +20,10 @@ class QRMachineController extends Controller
     {
         //
         $machine = Machine::find($machine->id);
+        
         $machine->active_status = '1';
         $machine->activation_date = Carbon::now()->format('Y-m-d');
+        $machine->payment_date = Carbon::now()->addMonth()->format('Y-m-d');
         $machine->save();
 
         return redirect()->route('machine.index');

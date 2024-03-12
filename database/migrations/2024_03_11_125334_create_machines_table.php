@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('seriale', 15)->unique();
             $table->timestamp('registration_date')->useCurrent();
             $table->date('activation_date')->nullable();
+            $table->date('payment_date')->nullable();
             $table->string('active_status', 1)->default(0);
             $table->string('debit_status', 1)->default(0);
             $table->string('penalty_status', 1)->default(0);

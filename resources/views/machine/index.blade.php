@@ -20,9 +20,10 @@
                         <th>Modelo</th>
                         <th>Marca</th>
                         <th>Serial</th>
-                        <th>Fecha de Registro</th>
+                        <th>Fecha de Activación</th>
+                        <th>Fecha de Pago</th>
                         <th>Estatus</th>
-                        <th colspan="3"></th>
+                        <th colspan="4"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +34,8 @@
                             <td>{{$machine->model}}</td>
                             <td>{{$machine->brand}}</td>
                             <td>{{$machine->seriale}}</td>
-                            <td>{{$machine->registration_date}}</td>
+                            <td>{{$machine->activation_date}}</td>
+                            <td>{{$machine->payment_date}}</td>
                             @switch(true)
                                 @case($machine->active_status==0)
                                     <td>Inactiva</td>
@@ -41,12 +43,14 @@
                                     @break
                                 @case($machine->active_status==1)
                                     <td>Activa</td>
+                                    <td width="15px"><a href="{{route('machine.createqr',$machine)}}" class="btn btn-warning btn-sm">Ver QR</a></td>
                                     @break
                                 @default
                                     
                             @endswitch
                             
                             <td width="15px"><a href="{{route('machine.edit',$machine)}}" class="btn btn-primary btn-sm">Editar</a></td>
+                            <td width="15px"><a href="{{route('machine.edit',$machine)}}" class="btn btn-success btn-sm">Pago</a></td>
                             <td width="15px">
                                 <form action="{{route('machine.destroy',$machine)}}" method="POST">
                                     @method('delete')
