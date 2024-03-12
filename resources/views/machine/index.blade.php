@@ -37,7 +37,7 @@
                             @switch(true)
                                 @case($machine->active_status==0)
                                     <td>Inactiva</td>
-                                    <td width="50spx"><a href="{{route('machine.edit',$machine)}}" class="btn btn-warning btn-sm">Activar</a></td>
+                                    <td width="15px"><a href="{{route('machine.createqr',$machine)}}" class="btn btn-warning btn-sm">Activar</a></td>
                                     @break
                                 @case($machine->active_status==1)
                                     <td>Activa</td>

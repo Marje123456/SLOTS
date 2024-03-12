@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('machines', function (Blueprint $table) {
             $table->id();
-            $table->string('premise_ident', 15)->unique();           
+            $table->string('premise_ident', 15);           
             $table->foreign('premise_ident')->references('ident')->on('premises');
             $table->string('code', 15)->unique();
             $table->string('model', 50)->nullable();
