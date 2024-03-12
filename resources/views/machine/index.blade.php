@@ -36,6 +36,7 @@
                             <td>{{$machine->seriale}}</td>
                             <td>{{$machine->activation_date}}</td>
                             <td>{{$machine->payment_date}}</td>
+                            
                             @switch(true)
                                 @case($machine->active_status==0)
                                     <td>Inactiva</td>
